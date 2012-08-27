@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+git_bundles = %w{
+	git://github.com/pangloss/vim-javascript.git
+	git://github.com/tomtom/tcomment_vim.git
+	git://github.com/tpope/vim-fugitive.git
+	git://github.com/tpope/vim-repeat.git
+	git://github.com/tpope/vim-surround.git
+	git://github.com/tsaleh/vim-matchit.git
+	git://github.com/vim-scripts/jQuery.git
+	git://github.com/Raimondi/delimitMate.git
+	git://github.com/klen/vim-jsmode.git
+	git://github.com/vim-scripts/csslint.vim.git
+	git://github.com/hallettj/jslint.vim.git
+	git://github.com/miguelvps/xoria256.vim.git
+	git://github.com/msanders/snipmate.vim.git
+}
+
+require 'fileutils'
+require 'open-uri'
+
+bundles_dir = File.join(File.dirname(__FILE__), "bundle")
+
+FileUtils.rm_rf(bundles_dir)
+FileUtils.mkdir(bundles_dir)
+FileUtils.cd(bundles_dir)
+
+git_bundles.each do |url|
+	puts url
+    `git clone -q #{url}`
+end
+
+Dir["*/.git"].each {|f| FileUtils.rm_rf(f) }
