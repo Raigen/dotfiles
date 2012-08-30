@@ -100,8 +100,8 @@ set diffopt+=iwhite
 set relativenumber
 
 " use normal regex
-nnoremap / /\v
-vnoremap / /\v
+" nnoremap / /\v
+" vnoremap / /\v
 
 " Complete whole filenames/lines with a quicker shortcut key in insert mode
 inoremap <C-f> <C-x><C-f>

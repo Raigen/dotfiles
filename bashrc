@@ -5,4 +5,4 @@ eval "`dircolors`"
 . ~/bin/dotfiles/bash/aliases
 . ~/bin/dotfiles/bash/config
 
-# . ~/.nvm/nvm.sh
+# . ~/nvm/nvm.sh
