@@ -9,7 +9,6 @@ git_bundles = %w{
 	git://github.com/tsaleh/vim-matchit.git
 	git://github.com/vim-scripts/jQuery.git
 	git://github.com/Raimondi/delimitMate.git
-	git://github.com/klen/vim-jsmode.git
 	git://github.com/vim-scripts/csslint.vim.git
 	git://github.com/hallettj/jslint.vim.git
 	git://github.com/miguelvps/xoria256.vim.git
