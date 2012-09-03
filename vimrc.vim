@@ -148,3 +148,7 @@ au BufRead,BufNewFile,BufWrite {*.json,,*.py,*.coffee,*.yaml,*.yml} set foldmeth
 " jump through search results with tab instead of %
 nnoremap <tab> %
 vnoremap <tab> %
+
+" --- Command-T
+let g:CommandTMaxHeight = 15
+let g:CommandTCancelMap = ['<Esc>', '<C-c>']
