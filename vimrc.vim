@@ -2,6 +2,13 @@ set nocompatible                    " full vim
 syntax enable                       " enable syntax highlighting
 set encoding=utf8                   " utf8 default encoding
 
+" On Windows, also use '.vim' instead of 'vimfiles'
+" this makes synchronization across (heterogeneous) systems easier.
+if has('win32') || has('win64')
+	set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+endif
+		
+
 filetype off
 call pathogen#infect()              " load pathogen
 call pathogen#helptags()			
@@ -98,6 +105,22 @@ set diffopt+=iwhite
 " Trying out the line numbering thing... never liked it, but that doesn't mean
 " I shouldn't give it another go :)
 set relativenumber
+
+if has("gui_running")
+   au GUIEnter * set vb t_vb=       " disable visual bell in gui
+   set guioptions-=T                " remove gui toolbar
+   set guioptions-=m                " remove gui menubar
+   set linespace=2                  " space between lines
+   set columns=160 lines=35         " window size
+
+   set guioptions+=LlRrb            " crazy hack to get gvim to remove all scrollbars
+   set guioptions-=LlRrb
+
+"   set guifont=Ubuntu\ Mono\ for\ Powerline\ 13    " gui font
+"   set background=dark
+"   colorscheme ir_black " gui theme
+endif
+
 
 " use normal regex
 " nnoremap / /\v
