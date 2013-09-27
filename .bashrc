@@ -1,8 +1,7 @@
 export LS_OPTIONS='--color=auto'
 eval "`dircolors`"
 
-. ~/bin/dotfiles/bash/env
-. ~/bin/dotfiles/bash/aliases
-. ~/bin/dotfiles/bash/config
-
-# . ~/nvm/nvm.sh
+source ~/bin/dotfiles/bash/env
+source ~/bin/dotfiles/bash/aliases
+source ~/bin/dotfiles/bash/config
+source ~/.bashrc.local

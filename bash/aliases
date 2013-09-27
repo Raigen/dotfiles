@@ -1,8 +1,11 @@
+alias ~='cd ~'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+
 alias reload='source ~/.bashrc'
-alias ls='ls $LS_OPTIONS'
+
 alias l='ls -lah'
-alias ~='cd ~'
-alias ll='tree --dirsfirst -ChFupDaLg 1'
+alias ls='ls -l'
+alias gvimdiff='gvim -d'
+alias vimmdiff='vim -d'
