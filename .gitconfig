@@ -1,0 +1,65 @@
+[user]
+    name = Florian Oellerich
+    email = falkentavio@hotmail.de
+[core]
+    editor = vim
+    autocrlf = input
+    whitespace = fix, -indent-with-non-tab, trailing-space
+    excludefile = ~/.gitignore
+[push]
+    default = simple
+[rerere]
+    enabled = 1
+    autoupdate = 1
+[color]
+    ui = true
+[color "branch"]
+    current = yellow bold
+    local = green bold
+    remote = cyan bold
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[merge]
+    tool = vimdiff
+[mergetool]
+    prompt = false
+    keepBackup = false
+[alias]
+    s = status
+    sb = status -s -b
+    ############
+    c = commit
+    ca = commit --amend
+    cm = commit -m
+    ############
+    a = add .
+    ############
+    o = checkout
+    ############
+    f = fetch
+    fo = fetch origin
+    ############
+    ps = push
+    pso = push origin
+    ############
+    pl = pull
+    ############
+    rb = rebase
+    ############
+    re = reset
+    rehh = reset --hard HEAD
+[github]
+    user = Raigen
+    token = token
