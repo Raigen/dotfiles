@@ -6,6 +6,6 @@ alias ....='cd ../../..'
 alias reload='source ~/.bashrc'
 
 alias l='ls -lah'
-alias ls='ls -l'
+alias ls='ls -1'
 alias gvimdiff='gvim -d'
 alias vimmdiff='vim -d'
