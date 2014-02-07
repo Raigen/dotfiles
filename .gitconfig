@@ -36,6 +36,8 @@
 [mergetool]
     prompt = false
     keepBackup = false
+[rebase]
+    autosquash = true
 [alias]
     s = status
     sb = status -s -b
@@ -60,6 +62,8 @@
     ############
     re = reset
     rehh = reset --hard HEAD
+    ############
+    fs = flow feature start
 [github]
     user = Raigen
     token = token
