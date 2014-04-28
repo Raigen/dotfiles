@@ -42,18 +42,20 @@
     s = status
     sb = status -s -b
     ############
+    lg = log --pretty=oneline --abbrev-commit --graph --decorate
+    ############
     c = commit
-    ca = commit --amend
+    ca = commit --amend --no-edit
     cm = commit -m
     ############
-    a = add .
+    a = add -A
     ############
     o = checkout
     ############
     f = fetch
     fo = fetch origin
     ############
-    ps = push
+    ps = push --set-upstream
     pso = push origin
     ############
     pl = pull
@@ -62,6 +64,8 @@
     ############
     re = reset
     rehh = reset --hard HEAD
+    ############
+    wip = !git add -A && git commit -m 'WIP'
     ############
     fs = flow feature start
 [github]
