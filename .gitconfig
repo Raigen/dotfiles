@@ -42,7 +42,7 @@
     s = status
     sb = status -s -b
     ############
-    lg = log --pretty=oneline --abbrev-commit --graph --decorate
+    lg = log --all --graph --pretty=format:'%Cred%h%Creset - %s %C(bold blue)<%an>%Creset' --abbrev-commit
     ############
     c = commit
     ca = commit --amend --no-edit
@@ -51,12 +51,13 @@
     a = add -A
     ############
     o = checkout
+    ob = checkout -b
     ############
     f = fetch
     fo = fetch origin
     ############
     ps = push --set-upstream
-    pso = push origin
+    psf = push --force
     ############
     pl = pull
     ############
@@ -64,10 +65,12 @@
     ############
     re = reset
     rehh = reset --hard HEAD
-    ############
-    wip = !git add -A && git commit -m 'WIP'
-    ############
-    fs = flow feature start
-[github]
-    user = Raigen
-    token = token
+    ############ combined
+    wip = !git a && git cm 'WIP'
+    aca = !git a && git ca
+    acm = !git a && git cm
+    ############ gitflow
+    sf = flow feature start
+[include]
+    path = .gitconfig.github
+    path = .gitconfig.local
