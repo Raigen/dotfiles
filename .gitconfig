@@ -52,9 +52,14 @@
     ############
     o = checkout
     ob = checkout -b
+    ### checkout pull-request temporary
+    # params $0 remote remote repository
+    # params $1 prId id of the pull-request
+    op = "!sh -c 'git fetch $0 pull/$1/head && git o FETCH_HEAD'"
     ############
     f = fetch
     fo = fetch origin
+    fa = fetch --all --prune
     ############
     ps = push --set-upstream
     psf = push --force
@@ -69,8 +74,10 @@
     wip = !git a && git cm 'WIP'
     aca = !git a && git ca
     acm = !git a && git cm
-    ############ gitflow
-    sf = flow feature start
+    ########### shell
+    ### apply patch from url (like Gist)
+    # params $0 url url of the patch
+    dapply = "!sh -c '[ -n \"$0\" ] && curl \"$0\" | git apply -v --index'"
 [include]
     path = .gitconfig.github
     path = .gitconfig.local
