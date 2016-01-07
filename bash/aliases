@@ -12,4 +12,4 @@ alias vimmdiff='vim -d'
 
 alias npme='npm --registry http://registry.npmjs.eu'
 
-alias gitclean='git o dev && git branch --merged | grep feature | xargs git branch -d'
+alias gitclean='git o develop && git branch --merged | grep feature | xargs git branch -d'
