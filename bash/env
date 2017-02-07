@@ -1,2 +1,6 @@
 export EDITOR=vim
 export PATH=$PATH:~/bin
+
+export HISTCONTROL=erasedups # Remove duplicates from history (when a new item is added)
+export HISTSIZE=10000 # Increase the history size
+shopt -s histappend # Append history to ~/.bash_history. when you exit a shell
