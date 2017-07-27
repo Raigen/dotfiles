@@ -3,4 +3,7 @@ wp
 *~
 vim/.netrwhist
 vim/.vim_mru_files
+.history
+.vscode
+!.vscode/tasks.js
 NUL

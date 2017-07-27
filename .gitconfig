@@ -6,6 +6,8 @@
     autocrlf = input
     whitespace = fix, -indent-with-non-tab, trailing-space
     excludefile = ~/.gitignore
+[help]
+    autoCorrect = 1
 [push]
     default = simple
 [rerere]
@@ -29,8 +31,12 @@
     untracked = red bold
 [diff]
     tool = vimdiff
+    indentHeuristic = true
+    compactionHeuristic = true
 [difftool]
     prompt = false
+[difftool "code"]
+    cmd = "code --wait --diff "
 [merge]
     tool = vimdiff
 [mergetool]
@@ -50,6 +56,9 @@
     c = commit
     ca = commit --amend --no-edit
     cm = commit -m
+    fix = commit --fixup
+    squ = commit --squash
+    cp = cherry-pick
     ############
     a = add -A
     ############
@@ -61,7 +70,7 @@
     op = "!sh -c 'git fetch $0 pull/$1/head && git o FETCH_HEAD'"
     ############
     f = fetch --prune
-    fo = fetch origin
+    fo = fetch origin --prune
     fa = fetch --all --prune
     ############
     ps = push --set-upstream
@@ -71,7 +80,7 @@
     plr = pull --rebase
     ############
     rb = rebase
-    rbi = rebase -i
+    rbi = rebase -i --autosquash
     ############
     re = reset
     reh = reset --hard
